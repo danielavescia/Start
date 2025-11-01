@@ -1,0 +1,42 @@
+@startuml
+
+title Classes 
+
+interface Talkable{
+    +talk(): String
+}
+
+abstract class Animal implements Talkable{
+    # nome: String
+    + Animal(name: String)
+    + getNome(): String
+    + talk(): String
+}
+
+class Cat extends Animal{
+    + Gato(name: String)
+    + talk(): String
+}
+
+class Dog extends Animal{
+    + Dog(name: String)
+    + talk(): String
+}
+
+abstract class Radio implements Talkable{
+    + Talk()
+    + talk(): String
+}
+
+class FarmApp{
+    + main(args: String[]): void
+}
+
+' Relacionamentos
+Animal <|-- Dog
+Animal <|-- Cat
+Talkable <|.. Animal
+Talkable <|.. Radio
+FarmApp --> Talkable : usa
+
+@enduml
