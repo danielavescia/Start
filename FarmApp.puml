@@ -23,8 +23,8 @@ class Dog extends Animal{
     + talk(): String
 }
 
-abstract class Radio implements Talkable{
-    + Talk()
+class Radio implements Talkable{
+    + Radio()
     + talk(): String
 }
 
