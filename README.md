@@ -1,1 +1,3 @@
+![Java CI with Maven](https://github.com/danielavescia/Start/actions/workflows/maven.yml/badge.svg)
+
 ![Diagrama de Classe do Projeto Fazenda](https://www.plantuml.com/plantuml/png/bP71IiH038RlUOg01rkMxWCi8hjKzEPXzIOUicqiWpEPCfEAeBwxKpjLhAnYRycV_y-NpZOg1HsS1JLg6MjBCN9402FAuO4QnbkoZtIm_0AOlfMciYWtUAF1I0Tl07I86gXHR4OtxiGuicXSRzcnQ5madA1untF059fDXT2NKcQfOxrEXg9SM7w2JFjhKkHdPMbdbaoELwH-kUBNg0lV7ObAoh-IzjGQV_oVhAQ1ug-OImfkr_UpoP6HWa8Nvycx-sHwygOTBQUuPqkDyIEeg8-Gd-RijQh62xxLDIdCKAcpNkUB5yqFJiWSM5Nd-AblS8W4MvPsSFOT)
