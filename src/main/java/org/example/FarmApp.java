@@ -7,6 +7,7 @@ public class FarmApp{
         List<Talkable> coisasFazenda = List.of(
             new Cat("Mimi"),
             new Dog("Bud"), 
+            new Cow("Mimosa"),
             new Radio()
         );
 

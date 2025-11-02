@@ -1,13 +1,13 @@
 package org.example;
 
-public class Dog extends Animal{
-
-    public Dog(String name){
+public class Cow extends Animal{
+    
+    public Cow(String name){
         super(name);
     }
 
     @Override
     public String talk(){
-        return"au-au";
+        return "muuu";
     }
 }
