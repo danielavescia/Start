@@ -16,6 +16,9 @@ public abstract class Animal implements Talkable {
         this.name = name;
     }
     
+    //Não é obrigatório colocar.
+    /* 
     @Override
     public abstract String talk();
+    */
 }
