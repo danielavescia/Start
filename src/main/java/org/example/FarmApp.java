@@ -15,7 +15,7 @@ public class FarmApp{
         System.out.println("Iniciando a Fazenda");
         
         for (Talkable t : minhaFazenda){
-            t.talk();
+           System.out.println(t.talk());
         }
     }
 
