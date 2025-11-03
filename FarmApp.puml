@@ -9,7 +9,8 @@ interface Talkable{
 abstract class Animal implements Talkable{
     # nome: String
     + Animal(name: String)
-    + getNome(): String
+    + getName(): String
+    + setName(String name): void
     + talk(): String
 }
 
@@ -29,6 +30,7 @@ class Radio implements Talkable{
 }
 
 class FarmApp{
+    + FarmApp(minhaFazenda: List<Talkable>)
     + main(args: String[]): void
 }
 
