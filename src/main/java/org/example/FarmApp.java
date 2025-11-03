@@ -3,6 +3,22 @@ package org.example;
 import java.util.List;
 
 public class FarmApp{
+
+    //injeção de dependências
+    private final List<Talkable> minhaFazenda;
+
+    public FarmApp(List<Talkable> minhaFazenda){
+        this.minhaFazenda = minhaFazenda;
+    }
+
+    public void iniciarApp(){
+        System.out.println("Iniciando a Fazenda");
+        
+        for (Talkable t : minhaFazenda){
+            t.talk();
+        }
+    }
+
     public static void main(String[] args) {
         List<Talkable> coisasFazenda = List.of(
             new Cat("Mimi"),
@@ -11,11 +27,7 @@ public class FarmApp{
             new Radio()
         );
 
-        System.out.println("Iniciando a Fazenda");
-        
-        for (Talkable t : coisasFazenda){
-            t.talk();
-        }
-
+       FarmApp f = new FarmApp(coisasFazenda);
+       f.iniciarApp();
     }
 }
