@@ -11,6 +11,10 @@ public abstract class Animal implements Talkable {
     public String getName() {
         return name;
     }
+
+    public void setName(String name){
+        this.name = name;
+    }
     
     @Override
     public abstract String talk();
