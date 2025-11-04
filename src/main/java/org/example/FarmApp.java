@@ -11,12 +11,18 @@ public class FarmApp{
         this.minhaFazenda = minhaFazenda;
     }
 
-    public void iniciarApp(){
+    public void iniciarApp(List<Talkable> minhaFazenda){
         System.out.println("Iniciando a Fazenda");
-        
-        for (Talkable t : minhaFazenda){
+
+        // programação funcional
+             minhaFazenda.forEach(t ->  System.out.println(t.toString())); 
+
+        /*for (Talkable t : minhaFazenda){
            System.out.println(t.talk());
-        }
+        } */
+        
+
+        
     }
 
     public static void main(String[] args) {
@@ -28,6 +34,7 @@ public class FarmApp{
         );
 
        FarmApp f = new FarmApp(coisasFazenda);
-       f.iniciarApp();
+       
+       f.iniciarApp(coisasFazenda);
     }
 }
