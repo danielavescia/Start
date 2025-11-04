@@ -1,21 +1,23 @@
 @startuml
 
-title Classes 
+title Diagrama de Classes do Projeto 
 
 interface Talkable{
     +talk(): String
 }
 
 abstract class Animal implements Talkable{
-    # nome: String
+    # name: String
     + Animal(name: String)
     + getName(): String
     + setName(String name): void
+    + toString(): String
     + talk(): String
+    - _validateName(name: String) : void
 }
 
 class Cat extends Animal{
-    + Gato(name: String)
+    + Cat(name: String)
     + talk(): String
 }
 
@@ -24,19 +26,28 @@ class Dog extends Animal{
     + talk(): String
 }
 
-class Radio implements Talkable{
-    + Radio()
+class Cow extends Animal{
+    + Cow(name: String)
     + talk(): String
 }
 
+class Radio implements Talkable{
+    + Radio()
+    + talk(): String
+    + toString(): String
+}
+
 class FarmApp{
+    - minhaFazenda: List<Talkable>
     + FarmApp(minhaFazenda: List<Talkable>)
+    + iniciarApp(): void
     + main(args: String[]): void
 }
 
 ' Relacionamentos
 Animal <|-- Dog
 Animal <|-- Cat
+Animal <|-- Cow
 Talkable <|.. Animal
 Talkable <|.. Radio
 FarmApp --> Talkable : usa
