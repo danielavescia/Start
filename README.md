@@ -14,7 +14,7 @@ Inclui classes concretas que representam animais (`Cow`, `Cat`, `Dog`) e um rád
 - FarmApp: classe principal (main) que demonstra a interação entre os objetos.
 
 Abaixo o UML das Classes do Projeto e seus relacionamentos:
-![Diagrama de Classe do Projeto Fazenda](https://www.plantuml.com/plantuml/png/bP71IiH038RlUOg01rkMxWCi8hjKzEPXzIOUicqiWpEPCfEAeBwxKpjLhAnYRycV_y-NpZOg1HsS1JLg6MjBCN9402FAuO4QnbkoZtIm_0AOlfMciYWtUAF1I0Tl07I86gXHR4OtxiGuicXSRzcnQ5madA1untF059fDXT2NKcQfOxrEXg9SM7w2JFjhKkHdPMbdbaoELwH-kUBNg0lV7ObAoh-IzjGQV_oVhAQ1ug-OImfkr_UpoP6HWa8Nvycx-sHwygOTBQUuPqkDyIEeg8-Gd-RijQh62xxLDIdCKAcpNkUB5yqFJiWSM5Nd-AblS8W4MvPsSFOT)
+![Diagrama de Classe do Projeto Fazenda](https://www.plantuml.com/plantuml/png/bPBTwXCn4CNlynG3NhZBd-q3b59QjlHAHAft8ZBTZEjeFaeoRSMFTtTZTgkfgz3Bd3FpovnCDb4moDaQ9Io6OCVO1xG8cg0r62D5q1vU1V-9n8DIx8J21-m8tg3vZ4T3tnG0m9CCnwfUmci9x7hrGoayHWdO2NG915l75WsmFHcov2JU4Pw1GqiJ84F7fkfFfnwjdkJb85VrNKiSzIp-WWub5yzwB12VhRywSuH2RE3z1Grh54hGSX38s9GrHsnHWBu8EJt57HydEMNl_9KtqixtywJaF4Hg_NMUb9o7I0VKxF-zlwTSKCrZPj--vEynsEtfb6aDM7OVSOzVoMbSmWkEifekN6VQr57zhtGQXnrtZ26Lbz_18hiAGn-dYTw-gtylzZaSo637tc4AxQCQ__7gUzEaPHJd5gKy-wkQ9XcKnGAoMuhvuTIO1ffc3JT_2UU8QaDEdwtv2G00)
 
 
 ## Tecnologias utilizadas
