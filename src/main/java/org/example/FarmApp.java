@@ -11,7 +11,7 @@ public class FarmApp{
         this.minhaFazenda = minhaFazenda;
     }
 
-    public void iniciarApp(List<Talkable> minhaFazenda){
+    public void iniciarApp(){
         System.out.println("Iniciando a Fazenda");
 
         // programação funcional
@@ -20,9 +20,7 @@ public class FarmApp{
         /*for (Talkable t : minhaFazenda){
            System.out.println(t.talk());
         } */
-        
-
-        
+          
     }
 
     public static void main(String[] args) {
@@ -35,6 +33,6 @@ public class FarmApp{
 
        FarmApp f = new FarmApp(coisasFazenda);
        
-       f.iniciarApp(coisasFazenda);
+       f.iniciarApp();
     }
 }

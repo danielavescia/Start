@@ -26,6 +26,8 @@ void testAnimalSetNames(Animal animal, String newName) {
     assertEquals(newName, animal.getName());
 }  
 
+
+//Testa exceções da criação de objetos nulos/em branco
 @Test
 void testAnimalBlanckNameException(){
     IllegalArgumentException ex = assertThrows(IllegalArgumentException.class,
@@ -35,8 +37,18 @@ void testAnimalBlanckNameException(){
 
 @Test
 void testAnimalNullNameException(){
-    IllegalArgumentException ex = assertThrows(IllegalArgumentException.class,
+    NullPointerException ex = assertThrows(NullPointerException.class,
     () -> new Dog(null) );
     assertEquals("O nome do animal não pode ser nulo", ex.getMessage());
+}
+
+@Test
+void testAnimalSetNullNameException(){
+    Cat cat = new Cat("Mimi");
+    IllegalArgumentException ex = assertThrows(
+        IllegalArgumentException.class,
+        () -> cat.setName(" ")
+    );
+    assertEquals("O nome do animal não pode ser em branco", ex.getMessage());
 }
 }
