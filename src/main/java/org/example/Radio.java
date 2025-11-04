@@ -1,7 +1,11 @@
 package org.example;
-
+/**
+ * Representa um rádio que implementa a interface {@link Talkable}
+ * implementação específica da função (@link #talk())
+ * <p>
+ */
 public class Radio implements Talkable {
-
+    
     public Radio(){};
 
     @Override
