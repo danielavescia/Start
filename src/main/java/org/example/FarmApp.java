@@ -24,15 +24,20 @@ public class FarmApp{
     }
 
     public static void main(String[] args) {
-        List<Talkable> coisasFazenda = List.of(
-            new Cat("Mimi"),
-            new Dog("Bud"), 
-            new Cow("Mimosa"),
-            new Radio()
-        );
+        try{
+            List<Talkable> coisasFazenda = List.of(
+                new Cat("Mimi"),
+                new Dog("Bud"), 
+                new Cow("Mimosa"),
+                new Radio()
+            );
 
-       FarmApp f = new FarmApp(coisasFazenda);
-       
-       f.iniciarApp();
+            FarmApp f = new FarmApp(coisasFazenda);
+        
+            f.iniciarApp();
+
+        } catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }

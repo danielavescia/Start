@@ -35,7 +35,6 @@ public abstract class Animal implements Talkable {
     /** 
      * Redefine o nome do animal
      * @param name novo do animal que não pode ser nulo nem em branco.
-     * @throws IllegalArgumentException quando o nome é nulo ou em branco.
      * <p>
      **/
     public void setName(String name){
@@ -65,7 +64,7 @@ public abstract class Animal implements Talkable {
      * @throws NullPointerException se o nome for {@code null}
      * @throws IllegalArgumentException se o nome estiver em branco
      */
-    protected static  String validateName(String name){
+    protected static String validateName(String name) {
         name = Objects.requireNonNull(name, "O nome do animal não pode ser nulo");
     
         if(name.isBlank()){
