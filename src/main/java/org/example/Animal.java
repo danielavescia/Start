@@ -4,10 +4,11 @@ import java.util.Objects;
 
 /** 
  * Classe abstrata que representa um animal genérico.
+ * <p>
  * Todo animal deve ter um nome e a capacidade de falar/talk definida pela interface {@link Talkable}.
  * As subclasses devem implementar o método {@code talk()}.
- * <p>
- * **/
+ * </p>
+ */
 
 
 public abstract class Animal implements Talkable {
@@ -16,9 +17,9 @@ public abstract class Animal implements Talkable {
 
     /**
      * @param name nome do animal que não pode ser nulo nem em branco. 
-     *  <p>O nome é validado pelo método {@code validateName}. </p>
+     *  <p>O nome é validado pelo método {@code validateName}.</p>
      *
-     **/
+     */
     public Animal(String name){
         this.name = validateName(name);    
         
@@ -30,16 +31,15 @@ public abstract class Animal implements Talkable {
     }
 
     /** 
-     * <p>Retorna a string que corresponde ao nome do animal </p>
+     * Retorna a string que corresponde ao nome do animal 
      * @return o nome do animal
-     * 
-     **/
+     */
     public String getName() {
         return name;
     }
 
     /** 
-     *  <p> Redefine o nome do animal  </p>
+     *  Redefine o nome do animal  
      * @param name novo do animal que não pode ser nulo nem em branco.
      *
      **/
@@ -48,8 +48,8 @@ public abstract class Animal implements Talkable {
     }
 
     /**
-     * <p> Retorna uma representação textual do animal 
-     * que por padrão é o som produzido por ele ({@link #talk()}).</p>
+     * Retorna uma representação textual do animal 
+     * que por padrão é o som produzido por ele ({@link #talk()}).
      *
      * @return som do animal como {@code String}
      */

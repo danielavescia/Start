@@ -5,10 +5,11 @@ package org.example;
  * 
  */
 
+public interface Talkable {
 
- /**
+  /**
   * @return uma string do som correspondente a entidade que implementa a função
   */
-public interface Talkable {
+  
     String talk();
 }
