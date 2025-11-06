@@ -1,5 +1,6 @@
 # Start - Projeto Fazenda 
 ![Java CI with Maven](https://github.com/danielavescia/Start/actions/workflows/maven.yml/badge.svg)
+![Cobertura](./jacoco.svg)
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![JUnit 5](https://img.shields.io/badge/tests-JUnit%205-orange)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
