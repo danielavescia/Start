@@ -15,36 +15,42 @@ public abstract class Animal implements Talkable {
     protected String name;
 
     /**
-     * @param name nome do animaol que não pode ser nulo nem em branco. 
-     * O nome é validado pelo método {@code validateName}.
-     * <p>
+     * @param name nome do animal que não pode ser nulo nem em branco. 
+     *  <p>O nome é validado pelo método {@code validateName}. </p>
+     *
      **/
     public Animal(String name){
-        this.name = validateName(name);      
+        this.name = validateName(name);    
+        
+        /*Para o programa antes da produção
+        assert name != null;
+        assert !name.isBlank();
+        p/ funcioanr o assert: java -ea -cp target/classes/or.example.FarmApp
+        */  
     }
 
     /** 
-     * Retorna p nome do animal
+     * <p>Retorna a string que corresponde ao nome do animal </p>
      * @return o nome do animal
-     * <p>
+     * 
      **/
     public String getName() {
         return name;
     }
 
     /** 
-     * Redefine o nome do animal
+     *  <p> Redefine o nome do animal  </p>
      * @param name novo do animal que não pode ser nulo nem em branco.
-     * <p>
+     *
      **/
     public void setName(String name){
         this.name = validateName(name);
     }
 
     /**
-     * Retorna uma representação textual do animal,
-     * que por padrão é o som produzido por ele ({@link #talk()}).
-     *<p>
+     * <p> Retorna uma representação textual do animal 
+     * que por padrão é o som produzido por ele ({@link #talk()}).</p>
+     *
      * @return som do animal como {@code String}
      */
     @Override
@@ -65,6 +71,7 @@ public abstract class Animal implements Talkable {
      * @throws IllegalArgumentException se o nome estiver em branco
      */
     protected static String validateName(String name) {
+
         name = Objects.requireNonNull(name, "O nome do animal não pode ser nulo");
     
         if(name.isBlank()){

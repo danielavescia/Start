@@ -16,19 +16,39 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK 21
-      uses: actions/setup-java@v4
-      with:
-        java-version: '21'
-        distribution: 'temurin'
-        cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      # Build + Test + JaCoCo report
+      - name: Build with Maven and run tests
+        run: mvn -B clean test jacoco:report --file pom.xml
+
+      # Gera badge de cobertura de testes 
+      - name: Generate coverage badge
+        uses: cicirello/jacoco-badge-generator@v2
+        with:
+          jacoco-csv-file: target/site/jacoco/jacoco.csv
+          generate-coverage-badge: true
+          generate-branch-coverage-badge: true
+
+      # Faz commit do badge no Readme
+      - name: Commit badge
+        if: github.ref == 'refs/heads/master'  # evita rodar em PRs
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '*.svg'
+          message: 'Atualiza badge de cobertura [skip ci]'
+          push: true
+
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     #- name: Update dependency graph
