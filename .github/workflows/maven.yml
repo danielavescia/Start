@@ -64,6 +64,8 @@ jobs:
           add: '*.svg'
           message: 'Atualiza badge de cobertura [skip ci]'
           push: true
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Optional: Uploads the full dependency graph to GitHub (Dependabot)
       #- name: Update dependency graph
