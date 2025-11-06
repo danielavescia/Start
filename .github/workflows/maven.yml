@@ -39,10 +39,11 @@ jobs:
           jacoco-csv-file: target/site/jacoco/jacoco.csv
           generate-coverage-badge: true
           generate-branch-coverage-badge: true
+          output-file: jacoco.svg 
 
       # Faz commit do badge no Readme
       - name: Commit badge
-        if: github.ref == 'refs/heads/master'  # evita rodar em PRs
+        if: github.ref == 'refs/heads/master'  
         uses: EndBug/add-and-commit@v9
         with:
           add: '*.svg'
